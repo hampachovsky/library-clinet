@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addBook } from 'store/bookSlice';
 
 export const Create = () => {

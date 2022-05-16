@@ -9,10 +9,10 @@ function App(props) {
   return (
     <Layout>
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/books/:bookId' element={<Book />} />
         <Route path='/books' element={<Books />} />
         <Route path='/create' element={<Create />} />
-        <Route path='/' element={<Home />} />
       </Routes>
     </Layout>
   );
