@@ -20,6 +20,11 @@ export const BookCard = ({ id, name, author, img }) => {
           Explore More
         </button>
       </Link>
+      <Link to={`/edit/${id}`}>
+        <button className='mt-2 py-2 text-lg font-medium w-full bg-yellow-500 text-white rounded-lg hover:bg-yellow-600'>
+          Edit
+        </button>
+      </Link>
       <button
         onClick={() => dispatch(deleteBook(id))}
         className='mt-2 py-2 text-lg font-medium w-full bg-red-500 text-white rounded-lg hover:bg-red-600'

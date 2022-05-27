@@ -4,11 +4,12 @@ import starIcon from 'assets/star.svg';
 import amazonIcon from 'assets/amazon.png';
 import coverIcon from 'assets/cover.png';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export const Book = () => {
   const { bookId } = useParams();
   const bookState = useSelector((state) => state.books);
-  const book = bookState.find((book) => book.id === bookId);
+  const book = bookState.find((book) => book.id === +bookId);
 
   return (
     <div className='my-8 flex gap-4 justify-center items-center'>
@@ -38,6 +39,11 @@ export const Book = () => {
             Buy on Amazon
           </button>
         </a>
+        <Link to={`/edit/${bookId}`}>
+          <button className='mt-4 bg-amazon p-4 text-2xl font-medium text-white flex rounded-lg items-center hover:bg-opacity-80'>
+            Edit
+          </button>
+        </Link>
       </div>
     </div>
   );
